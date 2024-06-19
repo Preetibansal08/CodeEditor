@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Include Linting Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/htmllint/0.7.2/htmllint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/csslint/1.0.5/csslint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/eslint/7.32.0/eslint.js"></script>
+</head>
+<body>
+    
+   <section class="container">
+        <h1>Code Editor 🧑‍💻</h1> 
+
+        <div class="editor">
+          <div class="left">
+            <label><i class='bx bxl-html5'></i>HTML</label>
+            <textarea onkeyup="run()" spellcheck="false" id="html-code"><div><p>This is a paragraph</textarea>
+
+            <label><i class='bx bxl-css3' ></i>CSS</label>
+            <textarea onkeyup="run()" spellcheck="false" id="css-code">body { color: red }</textarea>
+
+            <label><i class='bx bxl-javascript' ></i>JavaScript</label>
+            <textarea onkeyup="run()" spellcheck="false" id="js-code">let x = 10</textarea>
+          </div>
+          <div class="right">
+            <label><i class='bx bx-play' ></i>Output</label>
+            <iframe id="output"></iframe>
+            <div id="errors"></div>
+          </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
